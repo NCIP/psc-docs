@@ -62,7 +62,16 @@ Manage access to the application across a multi-site environment
                       4.0 Bug fixes Since Last Release
 ================================================================
 
-    This is the first release of Patient Study Calendar.     
+    1.  Allow same activity to be added twice to a period.
+
+    2.  Automatically refresh template view when new activities are added.
+
+    3.  Do not allow the deletion of the final remaining epoch.
+    
+    4.  Rectify CSM security realms and Tomcat authentication.
+
+    5.  "Mark Template Complete" is now available to Study Coordinators.
+         
   
 ================================================================
                      5.0 Known Issues Not Yet Fixed

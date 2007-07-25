@@ -1,0 +1,297 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 10">
+<link rel=File-List href="PSC_Risk_Matrix_6-30-07.xls_files/filelist.xml">
+<link rel=Edit-Time-Data href="PSC_Risk_Matrix_6-30-07.xls_files/editdata.mso">
+<link rel=OLE-Object-Data href="PSC_Risk_Matrix_6-30-07.xls_files/oledata.mso">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:LastAuthor>Preferred Customer</o:LastAuthor>
+  <o:Created>2007-07-25T18:16:39Z</o:Created>
+  <o:LastSaved>2007-07-25T18:16:39Z</o:LastSaved>
+  <o:Version>10.6830</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:DownloadComponents/>
+  <o:LocationOfComponents HRef="file:///\\"/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;}
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl24
+	{mso-style-parent:style0;
+	border:.5pt solid black;
+	white-space:normal;}
+.xl25
+	{mso-style-parent:style0;
+	mso-number-format:"General Date";
+	border:.5pt solid black;
+	white-space:normal;}
+.xl26
+	{mso-style-parent:style0;
+	mso-number-format:"Short Date";
+	border:.5pt solid black;
+	white-space:normal;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>PSC_Risk_Matrix</x:Name>
+    <x:WorksheetOptions>
+     <x:Selected/>
+     <x:DoNotDisplayGridlines/>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+  <x:WindowHeight>10875</x:WindowHeight>
+  <x:WindowWidth>19980</x:WindowWidth>
+  <x:WindowTopX>240</x:WindowTopX>
+  <x:WindowTopY>30</x:WindowTopY>
+  <x:ProtectStructure>False</x:ProtectStructure>
+  <x:ProtectWindows>False</x:ProtectWindows>
+ </x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+
+<body link=blue vlink=purple>
+
+<table x:str border=0 cellpadding=0 cellspacing=0 width=2462 style='border-collapse:
+ collapse;table-layout:fixed;width:1849pt'>
+ <col width=49 style='mso-width-source:userset;mso-width-alt:1792;width:37pt'>
+ <col width=256 style='mso-width-source:userset;mso-width-alt:9362;width:192pt'>
+ <col width=87 style='mso-width-source:userset;mso-width-alt:3181;width:65pt'>
+ <col width=256 span=2 style='mso-width-source:userset;mso-width-alt:9362;
+ width:192pt'>
+ <col width=96 style='mso-width-source:userset;mso-width-alt:3510;width:72pt'>
+ <col width=94 style='mso-width-source:userset;mso-width-alt:3437;width:71pt'>
+ <col width=256 style='mso-width-source:userset;mso-width-alt:9362;width:192pt'>
+ <col width=97 style='mso-width-source:userset;mso-width-alt:3547;width:73pt'>
+ <col width=74 style='mso-width-source:userset;mso-width-alt:2706;width:56pt'>
+ <col width=101 style='mso-width-source:userset;mso-width-alt:3693;width:76pt'>
+ <col width=89 style='mso-width-source:userset;mso-width-alt:3254;width:67pt'>
+ <col width=61 style='mso-width-source:userset;mso-width-alt:2230;width:46pt'>
+ <col width=100 style='mso-width-source:userset;mso-width-alt:3657;width:75pt'>
+ <col width=256 span=2 style='mso-width-source:userset;mso-width-alt:9362;
+ width:192pt'>
+ <col width=78 style='mso-width-source:userset;mso-width-alt:2852;width:59pt'>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl24 width=49 style='height:12.75pt;width:37pt'>Risk ID</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Project/Task
+  Order Name</td>
+  <td class=xl24 width=87 style='border-left:none;width:65pt'>Type</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Risk</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Likelihood</td>
+  <td class=xl24 width=96 style='border-left:none;width:72pt'>Impact</td>
+  <td class=xl24 width=94 style='border-left:none;width:71pt'>Status</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Mitigation Plan</td>
+  <td class=xl24 width=97 style='border-left:none;width:73pt'>Estimated LOE</td>
+  <td class=xl24 width=74 style='border-left:none;width:56pt'>Actual LOE</td>
+  <td class=xl24 width=101 style='border-left:none;width:76pt'>Date Logged</td>
+  <td class=xl24 width=89 style='border-left:none;width:67pt'>Date Identified</td>
+  <td class=xl24 width=61 style='border-left:none;width:46pt'>End Date</td>
+  <td class=xl24 width=100 style='border-left:none;width:75pt'>Resolution Date</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Comments</td>
+  <td class=xl24 width=256 style='border-left:none;width:192pt'>Contingency
+  Plan</td>
+  <td class=xl24 width=78 style='border-left:none;width:59pt'>Risk Source</td>
+ </tr>
+ <tr height=136 style='height:102.0pt'>
+  <td height=136 class=xl24 align=right width=49 style='height:102.0pt;
+  border-top:none;width:37pt' x:num>693</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>CTMS
+  Developer Study Calendar Module - Phase II</td>
+  <td class=xl24 width=87 style='border-top:none;border-left:none;width:65pt'>Resource</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Although
+  our SOW states PSC will be installed at adopter sites, there is currently no
+  funding available for adopters. If all adoption activities are voluntary, we
+  have no way guaranteeing full cooperation from adopters.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>3
+  = approximately 75% (a good or better than average chance risk will occur in
+  next 30 days)</td>
+  <td class=xl24 width=96 style='border-top:none;border-left:none;width:72pt'>(O)
+  Operational</td>
+  <td class=xl24 width=94 style='border-top:none;border-left:none;width:71pt'>(PND)
+  Pending</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>General
+  contractor is looking into adopter funding plans.</td>
+  <td class=xl24 align=right width=97 style='border-top:none;border-left:none;
+  width:73pt' x:num>100</td>
+  <td class=xl24 width=74 style='border-top:none;border-left:none;width:56pt'>&nbsp;</td>
+  <td class=xl25 align=right width=101 style='border-top:none;border-left:none;
+  width:76pt' x:num="39254.445208333331">6/21/2007 10:41</td>
+  <td class=xl26 align=right width=89 style='border-top:none;border-left:none;
+  width:67pt' x:num="39234">6/1/2007</td>
+  <td class=xl24 width=61 style='border-top:none;border-left:none;width:46pt'>&nbsp;</td>
+  <td class=xl24 width=100 style='border-top:none;border-left:none;width:75pt'>&nbsp;</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Funded
+  adoption has advantages and disadvantages. The advantages to the PSC Team are
+  that we can guarantee a high level of UAT and adopter input. The advantage
+  for adopters is of course funding for their time. The disadvantage for
+  adopters is that their workload increases dramatically over voluntary
+  participation.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>We
+  will continue to work with our elaborators to produce quality software
+  regardless of a funded adoption program.</td>
+  <td class=xl24 width=78 style='border-top:none;border-left:none;width:59pt'>External</td>
+ </tr>
+ <tr height=102 style='height:76.5pt'>
+  <td height=102 class=xl24 align=right width=49 style='height:76.5pt;
+  border-top:none;width:37pt' x:num>694</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>CTMS
+  Developer Study Calendar Module - Phase II</td>
+  <td class=xl24 width=87 style='border-top:none;border-left:none;width:65pt'>Requirements</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Requirements
+  of CTMSi Bundle project may or may not align with PSC adopter requirements.
+  We are being asked to provide features and timelines to the CTMSi project
+  well before these have been established by our elaborators.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>2
+  = approximately 50% (chances are even that risk will occur in next 30 days)</td>
+  <td class=xl24 width=96 style='border-top:none;border-left:none;width:72pt'>(M)
+  Moderate</td>
+  <td class=xl24 width=94 style='border-top:none;border-left:none;width:71pt'>(PND)
+  Pending</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Keep
+  CTMSi project management informed of PSC's timetable and development
+  priorities as these are established.</td>
+  <td class=xl24 align=right width=97 style='border-top:none;border-left:none;
+  width:73pt' x:num>75</td>
+  <td class=xl24 width=74 style='border-top:none;border-left:none;width:56pt'>&nbsp;</td>
+  <td class=xl25 align=right width=101 style='border-top:none;border-left:none;
+  width:76pt' x:num="39254.463275462964">6/21/2007 11:07</td>
+  <td class=xl26 align=right width=89 style='border-top:none;border-left:none;
+  width:67pt' x:num="39253">6/20/2007</td>
+  <td class=xl24 width=61 style='border-top:none;border-left:none;width:46pt'>&nbsp;</td>
+  <td class=xl24 width=100 style='border-top:none;border-left:none;width:75pt'>&nbsp;</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>We
+  believe that we can satisfy the goals of CTMSi while meeting the needs of our
+  adopters, but only if the CTMSi managers are willing to acknowledge the
+  importance of our adopter input.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>If
+  we do encounter a conflict between the requirements of CTMSi and our
+  adopters, we will identify the conflict and communicate it clearly the
+  adopters, CTMSi team, and our TPOC.</td>
+  <td class=xl24 width=78 style='border-top:none;border-left:none;width:59pt'>External</td>
+ </tr>
+ <tr height=68 style='height:51.0pt'>
+  <td height=68 class=xl24 align=right width=49 style='height:51.0pt;
+  border-top:none;width:37pt' x:num>695</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>CTMS
+  Developer Study Calendar Module - Phase II</td>
+  <td class=xl24 width=87 style='border-top:none;border-left:none;width:65pt'>Technical</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Could
+  be difficult to represent PSC data using only BRIDG-harmonized classes.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>3
+  = approximately 75% (a good or better than average chance risk will occur in
+  next 30 days)</td>
+  <td class=xl24 width=96 style='border-top:none;border-left:none;width:72pt'>(O)
+  Operational</td>
+  <td class=xl24 width=94 style='border-top:none;border-left:none;width:71pt'>(PND)
+  Pending</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>Work
+  with BRIDG THC to harmonize refinements to PSC model.</td>
+  <td class=xl24 align=right width=97 style='border-top:none;border-left:none;
+  width:73pt' x:num>30</td>
+  <td class=xl24 width=74 style='border-top:none;border-left:none;width:56pt'>&nbsp;</td>
+  <td class=xl25 align=right width=101 style='border-top:none;border-left:none;
+  width:76pt' x:num="39254.48909722222">6/21/2007 11:44</td>
+  <td class=xl26 align=right width=89 style='border-top:none;border-left:none;
+  width:67pt' x:num="39253">6/20/2007</td>
+  <td class=xl24 width=61 style='border-top:none;border-left:none;width:46pt'>&nbsp;</td>
+  <td class=xl24 width=100 style='border-top:none;border-left:none;width:75pt'>&nbsp;</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>PSC
+  contributions to production release of BRIDG are marked as &quot;draft&quot;
+  and are somewhat more complicated than the original PSC DAM.</td>
+  <td class=xl24 width=256 style='border-top:none;border-left:none;width:192pt'>&nbsp;</td>
+  <td class=xl24 width=78 style='border-top:none;border-left:none;width:59pt'>Internal</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=49 style='width:37pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=96 style='width:72pt'></td>
+  <td width=94 style='width:71pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=97 style='width:73pt'></td>
+  <td width=74 style='width:56pt'></td>
+  <td width=101 style='width:76pt'></td>
+  <td width=89 style='width:67pt'></td>
+  <td width=61 style='width:46pt'></td>
+  <td width=100 style='width:75pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=78 style='width:59pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

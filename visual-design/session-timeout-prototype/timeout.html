@@ -7,10 +7,7 @@
 	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
 	<script>
 		function request() {
-			new Ajax.Request(encodeURIComponent('timeout.html'), {method: 'get', onSuccess: function(transport) {
-				alert("success")
-			}
-			});
+			new Ajax.Request(encodeURIComponent('timeout.html'), {method: 'get'});
 		}
 		
 		var SC = {}
@@ -18,7 +15,7 @@
 			initialize: function() {
 				this.content = 
 					Builder.node('div', {id:'lightbox-content'}, [
-						Builder.node('form', {method:'post', action:'timeout2.html'}, [
+						Builder.node('form', {method:'post', action:'timeout.html'}, [
 							Builder.node('h1', 'Session Timed Out'),
 							Builder.node('p', 'Your session has expired.  Please log in again.'),
 							Builder.node('p', 'Once you\'ve logged in, you may need to retry your last action.'),
@@ -66,6 +63,7 @@
 	</script>
 </head>
 <body>
+	Session Timeout is 5 Seconds<br>
 	<input type="button" value="Click for Ajax Request" onclick="request()"/>
 	
 </body>

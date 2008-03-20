@@ -73,7 +73,7 @@
 		
 		SC.HttpSessionExpirationManager = Class.create({
 			initialize: function(session_timeout_in_seconds) {
-				this.warning_period_in_seconds = 5
+				this.warning_before_expiration_in_seconds = 5
 				this.userChallengeTimer = new SC.SessionTimer(new SC.UserActiveChallenge(), session_timeout_in_seconds - this.warning_period_in_seconds)
 				this.httpSessionTimer = new SC.SessionTimer(new SC.SessionExpiredLogic(), session_timeout_in_seconds)
 				

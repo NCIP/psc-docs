@@ -31,10 +31,35 @@
 			}			
 		})
 		
+		SC.UserActiveChallenge = Class.create( {
+			initialize: function() {
+				this.content = 
+					Builder.node('div', {id:'lightbox-content'}, [
+						Builder.node('form', {method:'post', action:'timeout.html'}, [
+							Builder.node('h1', 'Your Session is About to Expire'),
+							Builder.node('p', 'Please confirm that you are still active by clicking the button below.'),
+							Builder.node('input', {type:'button', value:'Confirm', id:'user-active-button'})
+						])
+					])
+				
+							
+			},
+			execute: function() {
+				$('lightbox').update(this.content.innerHTML)
+
+				$('user-active-button').observe('click', function() {
+					new Ajax.Request(encodeURIComponent('timeout.html'), {method: 'get'});
+					LB.Lightbox.deactivate()
+				})
+
+				LB.Lightbox.activate()
+			}
+		})
+		
 		SC.SessionTimer = Class.create(PeriodicalExecuter, {
-			initialize: function($super, time_in_seconds) {
+			initialize: function($super, expire_logic, time_in_seconds) {
 				$super(this.expire, time_in_seconds)
-				this.expire_logic = new SC.SessionExpiredLogic()
+				this.expire_logic = expire_logic
 			},
 			reset: function() {
 				this.stop()
@@ -48,22 +73,26 @@
 		
 		SC.HttpSessionExpirationManager = Class.create({
 			initialize: function(session_timeout_in_seconds) {
-				this.httpSessionTimer = new SC.SessionTimer(session_timeout_in_seconds)
+				this.warning_period_in_seconds = 5
+				this.userChallengeTimer = new SC.SessionTimer(new SC.UserActiveChallenge(), session_timeout_in_seconds - this.warning_period_in_seconds)
+				this.httpSessionTimer = new SC.SessionTimer(new SC.SessionExpiredLogic(), session_timeout_in_seconds)
 				
 				Ajax.Responders.register({
-					timer:this.httpSessionTimer,
+					timers:[this.httpSessionTimer, this.userChallengeTimer],
 					onComplete: function() {
-						this.timer.reset()
+						this.timers.each(function(timer) {							
+							timer.reset()
+						})
 					}
 				})
 			}
 		})
 		
-		new SC.HttpSessionExpirationManager(5)
+		new SC.HttpSessionExpirationManager(10)
 	</script>
 </head>
 <body>
-	Session Timeout is 5 Seconds<br>
+	Session Timeout is 10 Seconds<br>
 	<input type="button" value="Click for Ajax Request" onclick="request()"/>
 	
 </body>

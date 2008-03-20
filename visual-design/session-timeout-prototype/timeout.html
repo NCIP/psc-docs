@@ -40,20 +40,20 @@
 							Builder.node('p', 'Please confirm that you are still active by clicking the button below.'),
 							Builder.node('input', {type:'button', value:'Confirm', id:'user-active-button'})
 						])
-					])
-				
-							
+					])							
 			},
 			execute: function() {
 				$('lightbox').update(this.content.innerHTML)
-
+				this.add_button_listener()
+								
+				LB.Lightbox.activate()
+			},
+			add_button_listener: function() {
 				$('user-active-button').observe('click', function() {
 					new Ajax.Request(encodeURIComponent('timeout.html'), {method: 'get'});
 					LB.Lightbox.deactivate()
-				})
-
-				LB.Lightbox.activate()
-			}
+				})				
+			}			
 		})
 		
 		SC.SessionTimer = Class.create(PeriodicalExecuter, {

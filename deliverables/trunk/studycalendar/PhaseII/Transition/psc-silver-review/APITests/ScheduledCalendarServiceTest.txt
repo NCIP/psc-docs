@@ -1,0 +1,91 @@
+
+--------------------------------
+Executing ScheduledCalendarService#assignSubject method.
+ Following is the output :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduled-calendar xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="cafe983d-65ea-4758-920e-6bfee986dc5a" assignment-id="grid1" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <scheduled-study-segment id="074df0d7-1cb4-4365-9ad7-faa0d7addf83" start-date="2008-10-09" start-day="1" study-segment-id="grid6">
+    <scheduled-activity id="2549151b-d551-410f-ad69-c76ce1a6d192" ideal-date="2008-10-10" details="Nice Details!!" repetition-number="0">
+      <current-scheduled-activity-state reason="Initialized from template" date="2008-10-10" state="scheduled"/>
+    </scheduled-activity>
+  </scheduled-study-segment>
+</scheduled-calendar>
+
+ Sucessfully executed ScheduledCalendarService#assignSubject method.
+
+--------------------------------
+
+--------------------------------
+Executing ScheduledCalendarService#getScheduledCalendar method.
+ Following is the output :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduled-calendar xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ba405020-8a0f-47a0-87bb-13e433aa7032" assignment-id="grid1" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <scheduled-study-segment id="8f409239-759c-400b-a409-58de04293513" start-date="2008-10-09" start-day="1" study-segment-id="grid6">
+    <scheduled-activity id="6f6605e9-10fe-48fa-81ba-4e437cec3299" ideal-date="2008-10-10" details="Nice Details!!" repetition-number="0">
+      <current-scheduled-activity-state reason="Initialized from template" date="2008-10-10" state="scheduled"/>
+    </scheduled-activity>
+  </scheduled-study-segment>
+</scheduled-calendar>
+
+Sucessfully executed ScheduledCalendarService#getScheduledCalendar method.
+
+--------------------------------
+
+--------------------------------
+Executing ScheduledCalendarService#getScheduledActivities method.
+ Following is the output :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduled-activities xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <scheduled-activity id="grid7" ideal-date="2006-10-31" notes="Boo!" details="Nice Details!!" repetition-number="3">
+    <current-scheduled-activity-state reason="Success" date="2006-10-25" state="occurred"/>
+    <previous-scheduled-activity-state reason="Initial input" date="2006-10-22" state="scheduled"/>
+    <previous-scheduled-activity-state reason="Called to cancel" state="canceled"/>
+    <previous-scheduled-activity-state reason="Called to reschedule" date="2006-10-25" state="scheduled"/>
+  </scheduled-activity>
+  <scheduled-activity id="grid10" ideal-date="2006-11-01" details="Nice Details!!">
+    <current-scheduled-activity-state date="2006-10-29" state="scheduled"/>
+  </scheduled-activity>
+  <scheduled-activity id="grid11" ideal-date="2006-11-02" details="Nice Details!!">
+    <current-scheduled-activity-state date="2006-10-30" state="scheduled"/>
+  </scheduled-activity>
+  <scheduled-activity id="grid12" ideal-date="2006-11-01" details="Nice Details!!">
+    <current-scheduled-activity-state state="canceled"/>
+  </scheduled-activity>
+  <scheduled-activity id="grid13" ideal-date="2006-11-08" details="Nice Details!!">
+    <current-scheduled-activity-state date="2006-11-07" state="canceled"/>
+  </scheduled-activity>
+</scheduled-activities>
+
+Sucessfully executed ScheduledCalendarService#getScheduledActivities method.
+
+--------------------------------
+
+--------------------------------
+Executing ScheduledCalendarService#changeEventState method.
+ Scheduled Activity in older state :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduled-activity xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="grid7" ideal-date="2006-10-31" notes="Boo!" details="Nice Details!!" repetition-number="3" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <current-scheduled-activity-state reason="Success" date="2006-10-25" state="occurred"/>
+  <previous-scheduled-activity-state reason="Initial input" date="2006-10-22" state="scheduled"/>
+  <previous-scheduled-activity-state reason="Called to cancel" state="canceled"/>
+  <previous-scheduled-activity-state reason="Called to reschedule" date="2006-10-25" state="scheduled"/>
+</scheduled-activity>
+
+ Scheduled Activity in new state :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduled-activity xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="grid7" ideal-date="2006-10-31" notes="Boo!" details="Nice Details!!" repetition-number="3" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <current-scheduled-activity-state reason="conditional change" state="conditional"/>
+  <previous-scheduled-activity-state reason="Initial input" date="2006-10-22" state="scheduled"/>
+  <previous-scheduled-activity-state reason="Called to cancel" state="canceled"/>
+  <previous-scheduled-activity-state reason="Called to reschedule" date="2006-10-25" state="scheduled"/>
+  <previous-scheduled-activity-state reason="Success" date="2006-10-25" state="occurred"/>
+</scheduled-activity>
+
+Sucessfully executed ScheduledCalendarService#changeEventState method.
+
+--------------------------------

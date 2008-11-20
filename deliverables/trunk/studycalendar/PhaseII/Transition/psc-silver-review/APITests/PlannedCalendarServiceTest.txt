@@ -1,0 +1,30 @@
+
+--------------------------------
+Executing plannedCalendarService.registerStudy method.
+ Following is the output :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<planned-calendar xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <epoch name="Dexter"/>
+  <epoch name="Gripping"/>
+  <epoch name="Sinister"/>
+</planned-calendar>
+
+Sucessfully executed plannedCalendarService.registerStudy method.
+
+--------------------------------
+
+--------------------------------
+Executing plannedCalendarService.getPlannedCalendar method.
+ Following is the output :
+<?xml version="1.0" encoding="UTF-8"?>
+
+<planned-calendar xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <epoch name="Dexter"/>
+  <epoch name="Gripping"/>
+  <epoch name="Sinister"/>
+</planned-calendar>
+
+Sucessfully executed plannedCalendarService.getPlannedCalendar method.
+
+--------------------------------

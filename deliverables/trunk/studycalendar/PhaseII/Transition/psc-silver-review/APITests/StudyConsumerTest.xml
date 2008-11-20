@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<study xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" assigned-identifier="value15" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <planned-calendar id="1a6850b8-28bf-47ff-b5b1-ecaf2329363c"/>
+  <development-amendment name="[Original]" date="2008-10-08" mandatory="true">
+    <planned-calendar-delta id="9b291fd8-bd54-4b18-b6b2-194f1e7c8e7a" node-id="1a6850b8-28bf-47ff-b5b1-ecaf2329363c">
+      <add id="83b710ec-73cf-44c7-8294-8055bc488a08" index="0">
+        <epoch id="2713d607-e980-44d1-b34e-ad0d23afec62" name="Treatment1000">
+          <study-segment id="3f412bbf-86c5-4962-b3e4-e299b1a0cbaf" name="Arm 1000"/>
+          <study-segment id="c5abfa76-fe20-4f4e-9c55-b89475cfad3f" name="Arm 1001"/>
+        </epoch>
+      </add>
+      <add id="f1e19695-c1b0-4b6f-96f7-0f3fcd0a369d" index="1">
+        <epoch id="fef36f72-7a93-47a8-a679-4b4a81b1da3d" name="NonTreatment1004">
+          <study-segment id="aeb776fa-7f99-4cc0-8051-4b879d9c4b0f" name="NonTreatment1004"/>
+        </epoch>
+      </add>
+      <add id="9e7b1f62-9fed-4bbe-b59d-1b725d48d09c" index="2">
+        <epoch id="90dd6b27-de6f-43a5-bf21-148e3ca85b7b" name="Treatment1003">
+          <study-segment id="e558513a-dcd7-4751-baee-e26c8cc589fe" name="Arm 1006"/>
+          <study-segment id="55276f98-f02f-42d7-90b4-fa0749bdee47" name="Arm 1007"/>
+        </epoch>
+      </add>
+      <add id="23d9ec6f-4762-49b6-9078-5f6e9a6465b5" index="3">
+        <epoch id="a903d270-206f-43a6-bb9d-546e652085a0" name="NonTreatment1005">
+          <study-segment id="39a15cac-a9ef-4115-9388-1967d9184e7c" name="NonTreatment1005"/>
+        </epoch>
+      </add>
+      <add id="f6936d16-6f07-4b9b-8135-e7a6e08ff592" index="4">
+        <epoch id="ed35e653-277a-4943-8dcd-98ffe050fb46" name="Treatment1001">
+          <study-segment id="c059da67-5f82-4e4f-9b1a-cc4cce999cfe" name="Arm 1002"/>
+          <study-segment id="8a1bf48b-5b26-4699-b0ab-230421dd5955" name="Arm 1003"/>
+        </epoch>
+      </add>
+    </planned-calendar-delta>
+  </development-amendment>
+</study>

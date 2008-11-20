@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subject-assignment xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" study-name="TEST_STUDY" site-name="SITE_01" start-date="2007-10-09" subject-coordinator-name="Sam the subject coord" current-amendment-key="2008-10-08~[Original]" id="sampleRegistration" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd">
+  <subject first-name="John" last-name="Doe" person-id="mrn6" birth-date="1971-01-01" gender="Male"/>
+</subject-assignment>

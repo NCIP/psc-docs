@@ -1,0 +1,75 @@
+
+***** Gather external references for later resolution *****
+***** Deleting existing packages from model *****
+Importing Model from XMI
+***** Root Package: domain *****
+Add Classifier: BlackoutDate
+Add Classifier: Population
+Add Classifier: ScheduledStudySegment
+Add Classifier: Subject
+Add Classifier: PlannedActivityLabel
+Add Classifier: ScheduledActivity
+Add Classifier: AdverseEvent
+Add Classifier: Source
+Add Classifier: Epoch
+Add Classifier: WeekdayBlackout
+Add Classifier: Activity
+Add Classifier: PlannedCalendar
+Add Classifier: StudySubjectAssignment
+Add Classifier: RelativeRecurringBlackout
+Add Classifier: ActivityType
+Add Classifier: ActivityProperty
+Add Classifier: PlannedActivity
+Add Classifier: Study
+Add Classifier: ScheduledCalendar
+Add Classifier: Site
+Add Classifier: StudySegment
+Add Classifier: Notification
+Add Classifier: Period
+Add Classifier: StudySite
+Add Classifier: StudySecondaryIdentifier
+Add Classifier: SpecificDateBlackout
+Add Classifier: Duration
+Add Classifier Role: scheduledactivitystate
+Add Classifier Role: delta
+Add Classifier Role: valuedomains
+***** Append Package: delta *****
+Add Classifier: Change
+Add Classifier: StudySegmentDelta
+Add Classifier: PlannedCalendarDelta
+Add Classifier: Remove
+Add Classifier: Add
+Add Classifier: PlannedActivityLabelDelta
+Add Classifier: PeriodDelta
+Add Classifier: AmendmentApproval
+Add Classifier: PropertyChange
+Add Classifier: PlannedActivityDelta
+Add Classifier: PopulationDelta
+Add Classifier: Amendment
+Add Classifier: Delta
+Add Classifier: StudyDelta
+Add Classifier: EpochDelta
+Add Classifier: Reorder
+Add Classifier: Revision
+***** Append Package: scheduledactivitystate *****
+Add Classifier: Missed
+Add Classifier: Canceled
+Add Classifier: NotApplicable
+Add Classifier: Conditional
+Add Classifier: Scheduled
+Add Classifier: ScheduledActivityState
+Add Classifier: Occurred
+***** Append Package: valuedomains *****
+Add Classifier: DayOfTheWeek
+***** Resolving Classifiers *****
+***** Resolving Ownerss *****
+***** Resolve Package Links *****
+***** Add Extensions ******
+***** Add Diagrams *****
+***** Resolving DiagramIDs *****
+***** Resolving Association Classes *****
+***** Resolving Parameter Types *****
+***** Resolving Attribute Types *****
+***** Resolving Note links *****
+***** Fixup external references *****
+Import Complete!

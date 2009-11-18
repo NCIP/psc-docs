@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="http://bioinformatics.northwestern.edu/ns/psc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" message="Grade 3 adverse event with term Serum sickness" title="Serious Adverse Event on 08/01/2008" action-required="true" dismissed="false" xsi:schemaLocation="http://bioinformatics.northwestern.edu/ns/psc http://bioinformatics.northwestern.edu/ns/psc/psc.xsd"></notification>

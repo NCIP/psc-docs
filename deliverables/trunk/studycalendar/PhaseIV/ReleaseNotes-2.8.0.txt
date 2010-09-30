@@ -1,0 +1,613 @@
+Release Name: psc-2.8.0Notes:                         Release Notes                              Patient Study Calendar                          Version 2.8.0                          Date 9/30/2010    Robert H. Lurie Comprehensive Cancer Center, Northwestern University================================================================                            Contents================================================================        1.0 Patient Study Calendar Introduction    2.0 Release History    3.0 Change history    4.0 Bug Reports and Support    5.0 Documentation    6.0 References================================================================                      1.0 Patient Study Calendar Introduction================================================================       This document contains the release notes for Patient Study Calendar, version 2.8.0.      Patient Study Calendar is an open source, standards-compliant software application that can be used by organizations that manage patient activities on cancer clinical trials. Patient Study Calendar supports the application of a study template to study participants and enables the prospective forecasting of participant activities.  It also provides a framework for reviewing historical study calendar events. Patient Study Calendar records modifications to a participant's schedule and enables access control to the application across a multi-site environment.      The Patient Study Calendar application is intended to be installed on a single server at a coordinating cancer center and accessed by any number of clients via a web browser.      This release of Patient Study Calendar supports caBIG Silver Level Compatibility.    The test site for Patient Study Calendar is hosted at:     https://demos.nubic.northwestern.edu/psc/ ================================================================                      2.0 Release History================================================================    Version 1.0    12/8/2006    Version 1.0.1  2/1/2007    Version 1.1    9/13/2007       Version 1.2    10/24/2007     Version 1.3    12/10/2007    Version 1.5    1/17/2008    Version 2.0    2/28/2008    Version 2.0.1  3/19/2008    Version 2.0.2  3/28/2008
+    Version 2.0.4  5/1/2008
+    Version 2.1    6/6/2008
+    Version 2.2    9/5/2008
+    Version 2.3    9/22/2008
+    Version 2.3.1  9/26/2008
+    Version 2.3.2  10/20/2008
+    Version 2.3.3  10/30/2008
+    Version 2.4    12/19/2008
+    Version 2.4.1  1/16/2009
+    Version 2.4.2  2/13/2009
+    Version 2.4.3  5/21/2009
+    Version 2.4.4  6/24/2009
+    Version 2.5.1  8/12/2009
+    Version 2.5.2  9/28/2009
+    Version 2.6   12/10/2009
+    Version 2.6.0a 1/08/2010
+    Version 2.6.1  1/26/2010
+    Version 2.6.3  4/1/2010
+    Version 2.7    5/26/2010
+    Version 2.7.1  9/8/2010
+    Version 2.8.0  9/30/2010================================================================                      3.0 Change history================================================================
+
+v 2.8.0 Features
+
+    1. Incorporation of The Clinical Trials Suite 2.2 unified
+authorization via a shared CSM database and harmonized roles.
+
+    2. Support for international date format.
+
+    3. Added details and condition to scheduled activity reports.
+
+    4. Support COPPA 3.2.  
+
+  Bug fixes
+
+    1. Fixed a NumberFormatException on the Activity tab.
+
+    2. Fixed a noisy error that occurred if PSC encountered an error while
+sending an error report.
+    
+    3. Activity sources must have a name.
+
+    4. Fixed out of memory exception when importing a template.
+
+  Known issues
+
+    1. User accounts will still exist within PSC, but every user will need to be re-provisioned.  In other words, they will need to be given new roles and assigned to studies and sites.
+
+    2. After upgrading to 2.8, the initial setup flow will launch in order to create a sysadmin user.  All existing PSC data will remain in tact.
+
+    3. The metadata (details, condition, labels, weight) on the Manage Period Activities page occasionally appears to be blank, even if values exist.  Reclicking the tab or reloading the page will fix this issue.
+
+    4. Changes to the name or abbreviation of a population during an amendment will result in improper displays when viewing past versions of the template.
+
+    5. Some resources within the RESTful API have been ported to the new authorization system.  These will be fully ready as of 2.8.1.  
+
+
+
+v 2.7.1 Bug fixes
+
+    1. Clarified the meaning of "off study" and added specific instructions for moving a patient "off treatment."
+
+    2. Add details and condition to scheduled activity reports.
+
+    3. Study purge now functions even if the study is not fully available for use.
+
+    4. Fixed number format exception on activity page.
+
+    5. Segments containing only population-limited activities will now schedule correctly.
+
+    6. Study Coordinators are prevented from editing released amendments.
+
+    7. Fixed the LazyInitialization error when assigning Subject Coorinators to a study.
+
+    8. The Subject schedule API will no longer leak subject name.  
+
+  Known issues
+
+    1. The metadata (details, condition, labels, weight) on the Manage Period Activities page occasionally appears to be blank, even if values exist.  Reclicking the tab or reloading the page will fix this issue.
+
+    2. Changes to the name or abbreviation of a population during an amendment will result in improper displays when viewing past versions of the template.
+
+
+v 2.7 Features
+
+    1. Import amendments to templates.
+
+    2. Support enabling/disabling debug logging at startup.
+
+    3. Get Excel or CSV exports directly from the subject schedule page.
+
+    4. Move from subject schedule page directly to report page to create specific reports.
+
+    5. Add subject filter for scheduled activty report user interface.
+
+    6. Completely remove a template and all associated schedules.
+
+    7. Specify which source will contain manually created activities.
+
+    8. Rename/remove the current default manual activity source.
+
+    9. Improve selection of activity types to be displayed on Subject Coordinator dashboard.  
+
+   10. Create the manual activity source during initial setup.
+
+   11. Display sites assigned to the study on the template page.
+
+   12. Add variables to URI template system.  
+
+   13. Added periodic updates to "Current activities" box on Subject Coordinator dashboard. 
+
+   14. Hide disabled users on assignSubjectCoordinatorByStudy grid.
+
+   15. Improve page flow from template approval.
+
+   16. Reload user's cached granted authorities when self modified.
+
+   17. Hide "Associate with external study" if no providers are configured.
+
+   18. Sort interapplication links by study.
+
+   19. De-emphasize subject activities that are not relevant to the current coordinator.
+
+  Bug fixes
+
+    1. Fixed adding Details or Condtion or Labels to amendment template for a Planned Activity happening on more than one day.
+
+    2. Improved XML importer.
+
+    3. Improved navigation within long activity sources.
+
+    4. Schedule preview now renders with an empty template.
+    
+    5. Fixed link to manually create an activity.
+
+    6. Addressed incorrect access control in several places.
+
+    7. Fixed ClassNotFoundException when a user is authenticated by CAS but unknown to PSC.
+
+    8. Fixed NoClassDefFoundError on Study List page.
+
+    9. Fixed editing population for amended template.
+
+    10. Fixed null pointer exception when viewing past amendments.
+
+    11. Populations now display when amendment level is specified.
+
+    12. Labels can now be removed from a planned activity.
+
+    13. COPPA StudySiteProvider now assumes that all COPPA StudySites have the HealthCareFacilities structural role (instead of our previous assumption of ResearchOrganization).
+
+    14. Improve error handling of StudySiteConsumer.
+
+    15. Fixed selection of different Study Segment for Study Administrators.
+
+    16. Added database-level constraints to ensure cycle length is not zero.
+
+    17. Removed incorrect access control warning from subject schedule page.
+
+    18. Used Windows-friendly line endings in SourceSerializerTest.
+
+    19. Added handling of incorrect date format in scheduled activity reports.
+
+    20. Improved error messages on Assign Subject page.
+
+    21. Now accepts only integers for activity weights.
+   
+    22. Fixed errors on Assign Subject Coordinator by User page of Site Coordinator dashboard.
+
+    23. To ensure proper access control, added pre-filters to study filters on report page for Subject Coordinators.
+
+    24. Fixed "Reset" button on Report page to clear labels.
+
+    25. Fixed addition of population to an amendment.
+
+    26. Fixed adding new URIs to activities.
+
+    27. Fixed "Associate with external study" link on template page.
+
+    28. Associate with external study now uses the proper secondary identifiers.
+
+    29. Fixed disappearing controls when a period is deleted.
+
+    30. Removed Add Period control for Study Administrator (only appeared when no periods existed for the selected segment).
+
+    31. Fixed sorting of activity types on Activities tab.
+
+    32. Do not set weight to 0 if it is unspecified (it should be null).
+
+    33. Corrected various spelling errors.
+
+    34. Changed list Users page title to List Users instead of New User.
+    
+    35. Fixed several IE7-specific issues:
+      a. Asynchronous request errors on autocomplete search boxes
+      b. Editing Activity Types
+      c. "Associate with exernal study" and "Set protocol identifier" not displaying for template in design    
+      d. Clicking "Done" not dismissing lightbox on Manage Period Activities page
+      e. Deleting Study Segment or Epoch removing controls for adding periods and setting cycle length
+      f. Filters on Subject Coordinator dashboard not working.
+
+  Known issues
+
+    1. The metadata (details, condition, labels, weight) on the Manage Period Activities page occasionally appears to be blank, even if values exist.  Reclicking the tab or reloading the page will fix this issue.
+
+    2. Changes to the name or abbreviation of a population during an amendment will result in improper displays when viewing past versions of the template.
+
+
+v 2.6.3 Features 
+
+    1. Automatically create sites/study sites in registration consumer.
+
+    2. Automatically create sites on demand in study consumer.
+
+    3. Use new Protocol Abstraction service to support StudySites from study lookup in COPPA
+StudySiteProvider.
+
+    4. Use external correlations (from COPPA) for Study and Site.
+
+  Bug fixes
+
+    1. Update grid consumers to use new grid service stubs.
+
+    2. Upgrade to Bering 0.7.1.
+
+    3. Ensure all password properties may be passed on the command
+line to BDA builds.
+
+    4. Remove deprecated schedule page and redirect to new page.
+
+    5. Remove COPPA-direct provider.
+
+    6. Fix errors on Site Coordinator dashboard with unassigned subjects.
+
+    7. Fix provider refreshes.
+
+    8. Fix null pointer exceptions when retrieving schedules that do
+not exist.
+
+    9. Export all amendments with study template.
+
+    10. Fix BDA failures when path contains a space.
+
+    11. Fix initial state of Site Coordinator dashboard.
+
+    12. Fix activity URI association.
+
+    13. Fix exceptions getting hidden by other exceptions.
+
+    14. Fix API calls when made by a user which is associated with a
+site from a refreshable provider.
+  
+    15. COPPA study provider is now using correct secondary identifier key
+for storing the coppa identifier.
+
+    16. Several adjustments to "unassigned" in Site Coordinator dashboard.
+
+    17. Fix exception on assignSubjectToSubjectCoordinator page.
+
+    18. Properly format activity export for import.
+
+    19. Activity export options now prompt for download.
+
+    20. Base registration rollback logic on assignment rather than subject timeout.
+
+  Known issues     	1.  When using with the Suite, blinded studies in C3PR do not send any segment information when the registration is broadcasted.  PSC responds to this by assigning the subject to the first study segment.  
+        2.  Under some circumstances, the database connection pool is exhausted.  This only seems to affect Oracle, but we have been unable to reliably duplicate it.
+    
+
+v 2.6.1 Features Ð none
+
+  Bug fixes
+ 
+    1. Drastically improve performance on Subject Schedule page in IE7.
+
+    2. Fix asynchronous request error on page when re-assigning subjects on Site Coordinator dashboard.
+
+    3. Handle subjects that do not yet have a primary Subject Coordinator.
+
+    4. Fix redirect loop with insecure authentication.
+
+    5. Deployment of new war files now updates existing application folders in tomcat/webapps.
+
+    6. Fix errors with COPPA site search.
+
+    7. Fix updates to schedule preview.
+
+    8. Fix CAS authentication error with user's first login.
+
+    9. Batch changed to scheduled activities now function properly.
+
+    10. Fix proxying a collection of objects in Osgimosis.  
+
+
+v 2.6.0a Features ÐThe sole purpose of this release is to add the Oracle driver to the release package.
+
+v 2.6 Features
+
+    1. Search for and add Sites from COPPA Organizations.
+
+    2. Associate study templates with protocols from COPPA.
+
+    3. Provide iCalendar exports for subject on multiple trials.
+
+    4. Provide iCalendar exports for all of a coordinator's subjects.
+
+    5. Subscribe to iCalendar feeds.
+
+    6. Configure authentication during initial setup.
+
+    7. Add multiple identifiers for a study.
+
+    8. Manage OSGi services through the UI.
+
+    9. Support NCI's BDA process.
+
+  Bug fixes
+
+    1. Remove login page if using CAS authentication.
+
+    2. Several fixes to importing activities.
+
+    3. Improved error handling on subject schedule page.
+
+    4. Hide sites that have not approved the template from subject coordinator.
+
+    5. Improved error handling for importing duplicate templates.
+
+    6. datasource.properties file now edits easily using Windows Notepad.
+
+    7. Fix caGrid WebSSO authentication system.
+
+    8. Remove own username from Subject Coordinator dashboard "colleagues" section.
+
+    9. Blank password no longer causes a null pointer exception.
+
+   10. Prevent and fix any existing null dates in scheduled activities.
+
+   11. Fix rendering of login screen in IE7.
+
+   12. Hide "Long title" field on template page when it has not been set.
+
+   13. Fix building PSC on Windows.
+
+   14. Fix Site creation page rendering in IE7.
+
+   15. Fix external identifier setup in IE7.
+
+   16. Adjust CCTS-related configuration option names.
+
+   17. Persist OSGi configurations across PSC version changes.
+
+   18. Fix automatic addition of new activity to manage period activities page.
+
+   19. Fix problem with writing to studycalendar-plugins.log.
+
+   20. Validate WebSSO configuration properties before saving.
+
+   21. Add missing button to apply non-mandatory amendments.
+
+   22. Fix blackout dates appearing on wrong date.
+
+   23. Prevent errors on schedule preview page.
+
+   24. Enforce appropriate access to controls to view or modify study templates.
+
+   25. Filter nullified study sites from COPPA.
+
+   26. Fix spelling of 'amendments.'
+
+   27. When creating an amendment, prevent deleting a segment from throwing a null pointer exception on the subject schedule.
+
+  Known issues    
+   1.  Searching for Organizations from COPPA launches a new search with each keystroke.  
+
+   2.  The direct COPPA data provider plugin cannot be used when PSC is configure to use local authentication.
+
+   3.  Schedule preview fails for an empty template.
+
+   4.  Under some circumstances, the connection pool is exhausted.  This only seems to affect Oracle, but we have been unable to reliably duplicate it.
+
+
+
+v 2.5.2 Features - This is a bug fix release.  
+
+  Bug fixes
+
+    1. Allow subject to be assigned to same study multiple times.
+
+    2. Fix update logic when importing a corrected list of activities.
+
+    3. Support activity types of more than two words.
+
+    4. Fix null pointer exception in ScheduledActivity#compareTo.
+
+    5. Support grid ID through API to retrieve subject centric schedule and perform assignment.
+
+    6. Fix PostgreSQL 8.3 incompatible code in assign subject flow.
+
+    7. Fix validation of fields on assign subject page.
+
+    8. Fix rendering of Scheduled Activity details page in IE7.
+
+  Known issues        1.  The subject centric page is missing an area to display notifications.  This will be fixed for 2.6.
+
+
+
+v 2.5.1 Features
+
+    1. Subject-centric schedule provides a single view for all studies on which a subject is enrolled.
+
+    2. Generate previews of the schedule in order to validate a template without releasing or enrolling a test subject.
+
+    3. Capture and display first, middle, and last names of users.
+
+    4. Edit user details.
+
+    5. Autocompleter for labels suggests as the user types.
+
+    6. Allow optional entry of weights for activities in order to determine display order in the template and subject schedule.  Activities are sorted by weight, then alphabetically          
+    by type.
+
+    7. Move to palette-based controls in order to simplify adding activities to periods.
+
+    8. New flexible authentication system based on OSGi plug-in layer.
+
+  Bug fixes
+
+    1. Many instances of strange or slow behavior on the manage period activities page have been addressed.
+
+    2. Subjects can now be enrolled on a study with a pending amendment.
+
+    3. Deleting epoch updates template page.
+
+    4. Fix activity search on manage period activities page.
+
+    5. Activity adds to grid on all browsers when created manually.
+
+    6. Reset buttons on report tab now work.
+
+    7. Correct "Select past due activities" behavior.
+
+    8. Add email messages for uncaught exceptions in RESTful API.
+
+    9. Adjust UI when amending a template to address collision between bar of days and list of changes.
+
+    10. Correctly serve psc.xsd from /api/v1/docs/psc.xsd.
+
+    11. Fix many actions and authorization associated with RESTful API.
+
+    12. Several UI fixes for IE7.
+
+    13. Fix deleting activity on activity tab.
+
+    14. Prevent disabled users from logging into CAS.
+
+    15. Evaluate past-due by scheduled date.
+
+    16. Remove off-study subjects from Subject Coordinator dashboard.
+
+    17. Escape commas in activity CSV files.
+
+    18. Fixed memory leaks on several pages.
+
+  Known issues     
+    1.  The grid services are not currently deploying.  We will fix this ASAP and release under 2.5.2.
+
+
+v 2.4.4 Features - This is a bug fix release.  
+
+  Bug fixes
+
+    1.  Fix template import error:  import was failing if a period was defined using time units larger than one week.
+
+    2.  Fix javascript error on template page.
+
+    3.  Manually created activity is automatically added to the list of activities on the manage period activities page.
+
+  Known issues         1.  When moving activities on the manage period page, the 'X' icons will occasionally jump to a different row.  When this occurs, the activities must be deleted and then added again.  This error is quite rare.  We have plans to eliminate this problem.  
+
+
+v 2.4.3 Features - This is a bug fix release.  
+
+  Bug fixes
+
+    1.  Fix template import/export errors.
+
+    2.  Fix breadcrumbs on new activity and import activity pages.
+
+    3.  IE7 compatibility:
+        a.  Calendar tab alignment
+        b.  Long entries into activity details, conditions, and labels
+        c.  Adding URI to new activity
+        d.  Display of activities
+        e.  Editing activities
+
+    4.  Correct placement of 'Copy' button for templates in design.
+
+    5.  Correctly display search box hint when using browsers back button.
+
+    6.  Apply modifications to Populations to the planned activities.  
+
+    7.  Add new manually-created activity to activity grid.
+
+
+v 2.4.2 Features - This is a bug fix and database cleanup release.  
+
+v 2.4.1 Features - This is a bug fix release.  
+
+v 2.4 Features
+
+    1.  Import activities in CSV format.
+
+    2.  Track length of cycles in amendments.
+
+    3.  Apply label changes to scheduled activities due to an amendment.
+
+    4.  Add labels to import and export functionality.  
+
+    5.  Generate reports based upon labels.
+
+    6.  Activity types are now configurable.
+
+    7.  Add new activity types as needed during activity import.
+
+    8.  Provide warning message when deleting a template.
+
+    9.  Duplicate existing templates.
+
+    10.  Assign URIs to activities.  
+
+    11.  Logo image is now replaceable.  
+
+    12.  CAS authentication now supports proxy tickets.
+
+    13.  Confirmation of successful updates added to Site Coordinator dashboard.
+
+    14.  Populations can now be amended.  
+
+v 2.3.3 Features
+
+    No new features were added during this release.  
+
+v 2.3.2 Features
+
+    1. Improve notifications on Subject Coordinator dashboard.
+
+    2. Sort activities on main template page.	
+
+
+v 2.3.1 Features
+
+    1. Sort scheduled activities on subject's schedule page by type and name.
+
+    2. Use protocol ID as name of template XML export.
+
+
+v 2.3 Features
+
+    1. Add labels to planned activities.
+
+    2. Display labels for scheduled activities.
+
+    3. Edit and delete sites.  The delete is only available if templates have not been assigned to sites.
+
+    4. User interface for adding assigned identifier to sites.
+
+    5. Allow date-filtered reporting on canceled, missed, and NA activities.  
+
+    6. New structure to the period creation page.
+
+    7. Improved date handling.
+ 
+    8. Show cycle numbers and days in the patient's schedule.
+
+
+v 2.2 Features
+
+    1.  Complete rewrite for manage periods page.  The new page is significantly faster and better organized.  
+
+    2.  Define days of the study segment in terms of cycles.  The cycle length is configurable for each segment.
+
+    3.  New activity management interface enables manually creating/editing/deleting activities from any source and creating new new sources.
+
+
+v 2.1 Features
+
+    1.  While building a template, duplicate a period from any template in the database.  
+
+    2.  On the page for adding activities to the period, highlight the square over which the cursor is hovering.
+
+    3.  On the page for adding activities to the period, clicking within the grid will add an activity.
+
+    4.  New report tab allows users to create custom reports and export them in CSV or Excel file formats.
+
+    5.  Notifications of amendments, reconsents, or the end of activities for a subject will appear on the subject coordinator's dashboard.  
+
+
+v 2.0.4 Features 
+
+    1.  Added support for MS SQL Server.  (Many thanks to UAMS.) 
+
+    2.  Specify units of time larger than days for periods.
+
+v 2.0.2 Features - This is primarily a release to address bugs that were identified in 2.0.1.    1.  Improved flow for adding activities    2.  Move epoch controls for better visibility    3.  Default activity search to "All types"v 2.0.1 Features    1.  IE 7 compatibility        2.  Configurable links to local CTMS    3.  RESTful API    4.  Extended authentication plugin to allow implementors to provide token-based security for the RESTful API in addition to, or instead of, the HTTP Basic authentication previously supported    5.  Grid services for importing/exporting templatesv 1.5 Features        1. Manage additional activities for special subject populations      2. Search through studies    3. Import and export templates    4. Create both mandatory and optional amendments    5. Provide reference to study plan from scheduled activities    6. Provide detailed information about status of template rollout to sitesv 1.3 Features    1. Site coordinator dashboard enables management of subject coordinator workload.    2. Site coordinator dashboard also enables management of rollout of studies and amendments at a site.    3. Provide workflow guidance during template creation.    4. Allow subject coordinators to view upcoming events for other subject coordinators.    5. Delay or advance entire subject schedule.    6. Allow very long periods or periods with many repetitions.    7. Import lists of activities.    8. Search box facilitates selection of activities.    9. New activity state "Missed."  v 1.2 Features       1.  Template amendments pushed to patient calendars.    2.  Export patient calendars in ICS format.    3.  Participant Coordinator dashboard shows aggregate schedules of upcoming and past due activities.    4.  Site membership moved to user account creation.    5.  State of activities labeled with icons.    6.  Site Coordinator dashboard allows quick assignment of PCs to templates.v 1.1 Features:    1.  New look and feelTo leverage design work already implemented by the caAERS and C3PR projects as well as present a more consistent look and feel across the applications within the CTMS workspace, we have adopted a similar look and feel for PSC.    2.  Select and manage arbitrary scheduled activitiesIn a patient's calendar, any number of activities may be selected and rescheduled, canceled, or marked as complete.    3.  Add reconsent to patient calendarsFor a given study, add a reconsent activity to each patient's schedule.    4.  Conditional activitiesDefine activities that should only occur under certain conditions.  The condition may be supplied, and the activity may then be scheduled for the patient later.    5.  Off studyCancel the remaining activities for a patient as of a specified date.    6.  Template amendmentsCreate updated versions of a study template.    7.  Real-world schedulingDescribe the days that a site will be closed so that study activities will be automatically scheduled for the next available day.    8.  User provisioningPSC now provides user provisioning interfaces, eliminating the need for users to install a separate User Provisioning Tool.    9.  Expandable/Collapsible template and calendar interfacesIn the interfaces for viewing templates or patient calendars, the user may expand or collapse any of the lists of activities. ================================================================                	4.0 Bug Reports and Support================================================================
+
+  Please post all bugs, support requests, and general inquiries to our Knowledge Center forum:
+
+      -- https://cabig-kc.nci.nih.gov/CTMS/forums/viewforum.php?f=20&sid=465e53d228918433c35088987f70048d
+
+ 
+================================================================                     	5.0 Documentation================================================================     Please visit the caBIG Knowledge Center for more information about PSC:       -- https://cabig-kc.nci.nih.gov/CTMS/KC/index.php/PSC================================================================                    	6.0 References================================================================The following urls access web pages relevant to Patient Study Calendar.    caBIG Home Page         --  http://cabig.nci.nih.gov/        NCICB Download Center    --  http://ncicb.nci.nih.gov/download/    caGrid    -- https://cabig.nci.nih.gov/workspaces/Architecture/caGrid    Study Calendar Repository   - http://gforge.nci.nih.gov/scm/?group_id=31//end

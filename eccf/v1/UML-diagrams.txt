@@ -1,0 +1,14 @@
+Planned Calendar Service
+========================
+Planned Calendar Model
+  - http://yuml.me/diagram/class/[PlannedCalendar|+name (String);+study: (Study);+epochs: (List);]
+
+Error Model
+  - http://yuml.me/diagram/class/[java.lang.RuntimeException|+message (String);+cause: (Throwable);]^[ResourceException|+code (int);+name (String);+description (String);+uri (String);]
+
+Interfaces
+  - http://yuml.me/diagram/class/[Planned Calendar With Amendment History Interface|+create;+retrieve;+update;]
+  - http://yuml.me/diagram/class/[Planned Calendar Status Interface|+update;]
+  - http://yuml.me/diagram/class/[Planned Calendar Approval Interface|+create;]
+  - http://yuml.me/diagram/class/[Amendment Interface|+create;+retrieve;+update;]
+  - http://yuml.me/diagram/class/[Planned Calendar Interface|+retrieve;]

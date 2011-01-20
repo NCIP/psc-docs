@@ -12,3 +12,9 @@ Interfaces
   - http://yuml.me/diagram/class/[Planned Calendar Approval Interface|+create;]
   - http://yuml.me/diagram/class/[Amendment Interface|+create;+retrieve;+update;]
   - http://yuml.me/diagram/class/[Planned Calendar Interface|+retrieve;]
+
+Scheduled Calendar Service
+==========================
+Scheduled Activity Model
+  - http://yuml.me/diagram/class/[ScheduledCalendar]<>1-1..*>[ScheduledStudySegment|+startDate (Date);startDay (Integer)]<>1-1..*>[ScheduledActivity|+state (Enum);+description (String);+notes (String);+idealDate (Date);+repititionNumber (Integer);+labels (List)]
+  - http://yuml.me/diagram/class/[ScheduledStudySegment|+startDate (Date);startDay (Integer)]<>1-1..*>[ScheduledActivity|+state (Enum);+description (String);+notes (String);+idealDate (Date);+repititionNumber (Integer);+labels (List)]

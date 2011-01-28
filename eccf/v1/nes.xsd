@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://bioinformatics.northwestern.edu/ns/nes"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:nes="http://bioinformatics.northwestern.edu/ns/nes"
+            xmlns:iso="uri:iso.org:21090"
+            xmlns="http://bioinformatics.northwestern.edu/ns/nes"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+            
+    <xsd:element name="study" type="nes:Study"/>
+    
+    <xsd:complexType name="Study">
+        <xsd:annotation>
+            <xsd:documentation>
+                A representation of an entire study, including all amendments.
+                The planned-calendar nested in a study element must include the id attribute.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II" minOccurs="0"/>
+            <xsd:element name="assigned-identifier" type="iso:ST"/>
+            <xsd:element name="long-title" type="iso:ST" minOccurs="0"/>
+            <xsd:element name="provider" type="iso:ST" minOccurs="0"/>
+            <xsd:element name="last-modified-date" type="iso:TS" minOccurs="0"/>
+            
+            <xsd:element ref="nes:long-title" minOccurs="0"/>
+            <!-- <xsd:element ref="psc:secondary-identifier" minOccurs="0" maxOccurs="unbounded"/> -->
+            <xsd:element ref="nes:planned-calendar" minOccurs="0"/>
+            <xsd:element ref="nes:development-amendment" minOccurs="0"/>
+            <xsd:element ref="nes:amendment" minOccurs="0" maxOccurs="unbounded"/>
+            <!-- <xsd:element ref="psc:sources" minOccurs="0" maxOccurs="1"/> -->
+        </xsd:sequence>
+    </xsd:complexType>
+    
+
+    
+    <xsd:element name="planned-calendar" type="nes:PlannedCalendar"/>
+    
+    <xsd:complexType name="PlannedCalendar">
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II" minOccurs="0"/>
+            
+            <xsd:element ref="nes:epoch" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="epoch" type="nes:Epoch"/>
+
+    <xsd:complexType name="Epoch">
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II" minOccurs="0"/>
+            <xsd:element name="name" type="iso:ST"/>
+            
+            <xsd:element name="study-segment" type="nes:StudySegment" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="study-segment" type="nes:StudySegment"/>
+
+    <xsd:complexType name="StudySegment">
+        <xsd:sequence>
+            <!-- <xsd:element name="id" type="iso:II" minOccurs="0"/> -->
+            <xsd:element name="name" type="iso:ST"/>
+            
+            <xsd:element name="period" type="nes:Period" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="period" type="nes:Period"/>
+
+    <xsd:complexType name="Period">
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II" minOccurs="0"/>
+            <xsd:element name="name" type="iso:ST"/>
+            <xsd:element name="start-day" type="iso:TS"/>
+            <xsd:element name="repetitions" type="iso:INT"/>
+            <xsd:element name="duration-quantity" type="iso:INT"/>
+            <xsd:element name="duration-unit" type="iso:ST"/>
+            
+            <xsd:element name="planned-activity" type="nes:PlannedActivity" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="planned-activity" type="nes:PlannedActivity"/>
+
+    <xsd:complexType name="PlannedActivity">
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II" minOccurs="0"/>
+            <xsd:element name="day" type="iso:INT"/>
+            <xsd:element name="details" type="iso:ST" minOccurs="0"/>
+            <xsd:element name="condition" type="iso:ST" minOccurs="0"/>
+            <xsd:element name="weight" type="iso:INT" minOccurs="0"/>
+
+            <xsd:element name="label" type="nes:Label" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="population-id" type="iso:II" minOccurs="0"/>
+            <xsd:element name="activity-id" type="iso:II"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="development-amendment" type="nes:Amendment"/>
+    <xsd:element name="amendment" type="nes:Amendment"/>    
+    
+    <xsd:complexType name="Amendment">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="planned-calendar-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="epoch-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="study-segment-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="period-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="planned-activity-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="population-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="study-delta" type="nes:Delta" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:choice>
+        <xsd:sequence>
+            <xsd:element name="name" type="iso:ST"/>
+            <xsd:element name="date" type="iso:TS"/>
+            <xsd:element name="mandatory" type="iso:BL.NONNULL" default="true"/>
+            <xsd:element name="previous-amendment-key" type="iso:ST"/>
+            <xsd:element name="released-date" type="iso:TS" minOccurs="0"/>
+            <xsd:element name="updated-date" type="iso:TS" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="Delta">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="add" type="nes:Add" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="remove" type="nes:Remove" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="reorder" type="nes:Reorder" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="property-change" type="nes:PropertyChange" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:choice>
+        <xsd:sequence>
+            <xsd:element name="id" type="iso:II"/>
+            <xsd:element name="node-id" type="iso:II" use="required"/>
+        </xsd:sequence
+    </xsd:complexType>
+
+    <xsd:complexType name="Add">
+        <xsd:annotation>
+            <xsd:documentation>
+                Indicates that a particular tree of template elements was added to the
+                study in a particular amendment. The tree will be rooted at one of the
+                contained elements. Any child elements that were added at the same time
+                should be nested inside their parents. i.e., if a study-segment with
+                two periods was added in a particular amendment, the add will look like this:
+
+                <![CDATA[
+                  <nes:add ...>
+                    <nes:study-segment ...>
+                      <nes:period ... />
+                      <nes:period ... />
+                    </nes:study-segment>
+                  </nes:add>
+                ]]>
+
+                Any planned-calendar, epoch, study-segment, period, or planned-activity nested
+                in an Add-typed element must include the id attribute.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element ref="nes:epoch"/>
+            <xsd:element ref="nes:study-segment"/>
+            <xsd:element ref="nes:period"/>
+            <xsd:element ref="nes:planned-activity"/>
+            <xsd:element ref="nes:population"/>
+        </xsd:choice>
+        <xsd:sequence>
+            <xsd:element name="index" type="iso:INT" minOccurs="0"/>
+            <xsd:element name="id" type="iso:ST"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="Remove">
+        <xsd:sequence>
+            <xsd:attribute name="id" type="iso:II"/>
+            <xsd:attribute name="child-id" type="iso:II"/>
+        </xsd:sequence>
+     </xsd:complexType>
+
+     <xsd:complexType name="Reorder">
+         <xsd:attribute name="id" type="xsd:string" use="required"/>
+         <xsd:attribute name="child-id" type="xsd:string" use="required"/>
+         <xsd:attribute name="old-index" type="xsd:integer" use="required"/>
+         <xsd:attribute name="new-index" type="xsd:integer" use="required"/>
+     </xsd:complexType>
+
+     <xsd:complexType name="PropertyChange">
+         <xsd:attribute name="id" type="xsd:string" use="required"/>
+         <xsd:attribute name="property-name" type="xsd:string" use="required"/>
+         <xsd:attribute name="old-value" type="xsd:string" use="required"/>
+         <xsd:attribute name="new-value" type="xsd:string" use="required"/>
+     </xsd:complexType>
+
+     <!-- Elements of global activities -->
+    
+
+</xsd:schema>

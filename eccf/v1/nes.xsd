@@ -233,23 +233,9 @@
          </xs:sequence>
      </xs:complexType>
 
-     <!-- TODO: I figure we don't need an II for this field because there are no resources that reference it directly -->
-     <!--       and it is scoped to the activity.                                                                     -->
-     <xs:complexType name="Property">
+     <xs:complexType name="ActivityProperty">
          <xs:element name="name" type="iso:ST"/>
          <xs:element name="value" type="iso:ST" minOccurs="0"/>
-     </xs:complexType>
-
-     <!-- TODO: How can we handle namespace, a string may allow a planned calendar consumer -->
-     <!--       to leak properties to another unintentionally.                              -->
-     <xs:complexType name="ActivityProperty" >
-         <xs:complexContent>
-             <xs:extension base="nes:Property">
-                 <xs:sequence>
-                     <xs:element name="namespace" type="iso:ST"/>
-                 </xs:sequence>
-             </xs:extension>
-         </xs:complexContent>
      </xs:complexType>
 
      <xs:element name="label" type="nes:Label"/>

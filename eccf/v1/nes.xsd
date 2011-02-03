@@ -406,21 +406,21 @@
      <xs:element name="scheduled-activity-state" type="nes:ScheduledActivityState"/>
 
      <xs:complexType name="ScheduledActivity">
-         <xs:sequence>
-             <xs:element name="id" type="iso:II" minOccurs="0"/>
-             <xs:element name="ideal-date" type="iso:TS"/>
-             <xs:element name="notes" type="iso:ST" minOccurs="0"/>
-             <xs:element name="details" type="iso:ST" minOccurs="0"/>
-             <xs:element name="repetition-number" type="iso:INT"/>
-             <xs:element name="planned-activity-id" type="iso:II"/>
-         </xs:sequence>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-             <xs:element name="current-scheduled-activity-state" type="nes:ScheduledActivityState" minOccurs="1"
+          <xs:sequence>
+              <xs:element name="id" type="iso:II" minOccurs="0"/>
+              <xs:element name="ideal-date" type="iso:TS"/>
+              <xs:element name="notes" type="iso:ST" minOccurs="0"/>
+              <xs:element name="details" type="iso:ST" minOccurs="0"/>
+              <xs:element name="repetition-number" type="iso:INT"/>
+              <xs:element name="planned-activity-id" type="iso:II"/>
+          </xs:sequence>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="current-scheduled-activity-state" type="nes:ScheduledActivityState" minOccurs="1"
                           maxOccurs="1"/>
-             <xs:element name="previous-scheduled-activity-state" type="nes:ScheduledActivityState" minOccurs="0"
+              <xs:element name="previous-scheduled-activity-state" type="nes:ScheduledActivityState" minOccurs="0"
                           maxOccurs="unbounded"/>
-         </xs:choice>
-     </xs:complexType>
+          </xs:choice>
+      </xs:complexType>
 
      <xs:complexType name="ScheduledActivityState">
          <xs:attribute name="state" use="required">
@@ -439,4 +439,10 @@
          <xs:attribute name="reason" type="xs:string"/>
      </xs:complexType>
 
+    <xs:element name="scheduled-calendar-property" type="nes:ScheduledCalendarProperty"/>
+    <xs:complexType name="ScheduledCalendarProperty">
+        <xsd:sequence>
+            <xs:element name="end-date" type="iso:TS" minOccurs="0"/>
+        </xsd:sequence>
+    </xs:complexType>
 </xs:schema>

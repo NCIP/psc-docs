@@ -225,7 +225,7 @@
              <xs:element name="name" type="iso:ST"/>
              <xs:element name="description" type="iso:ST" minOccurs="0"/>
              <!-- TODO: Do we need both type-id and type? -->
-             <xs:element name="type-id" type="iso:II"/ minOccurs="0">
+             <xs:element name="type-id" type="iso:II" minOccurs="0"/>
              <xs:element name="type" type="iso:ST" minOccurs="0"/>
              <xs:element name="code" type="iso:ST"/>
              <xs:element name="source-id" type="ISO:II"/>
@@ -234,22 +234,28 @@
      </xs:complexType>
 
      <xs:complexType name="ActivityProperty">
-         <xs:element name="name" type="iso:ST"/>
-         <xs:element name="value" type="iso:ST" minOccurs="0"/>
+         <xs:sequence>
+             <xs:element name="name" type="iso:ST"/>
+             <xs:element name="value" type="iso:ST" minOccurs="0"/>
+         </xs:sequence>
      </xs:complexType>
 
      <xs:element name="label" type="nes:Label"/>
 
      <xs:complexType name="Label">
-         <xs:attribute name="name" type="iso:ST"/>
-         <xs:attribute name="repetition-number" type="iso:INT" minOccurs="0"/>
+         <xs:sequence>
+             <xs:element name="name" type="iso:ST"/>
+             <xs:element name="repetition-number" type="iso:INT" minOccurs="0"/>
+         </xs:sequence>
      </xs:complexType>
 
      <xs:element name="population" type="nes:Population"/>
 
      <xs:complexType name="Population">
-         <xs:attribute name="abbreviation" type="iso:ST"/>
-         <xs:attribute name="name" type="iso:ST"/>
+         <xs:sequence>
+             <xs:attribute name="abbreviation" type="iso:ST"/>
+             <xs:attribute name="name" type="iso:ST"/>
+         </xs:sequence>
      </xs:complexType>
 
      <xs:element name="source" type="nes:Source"/>
@@ -441,8 +447,8 @@
 
     <xs:element name="scheduled-calendar-property" type="nes:ScheduledCalendarProperty"/>
     <xs:complexType name="ScheduledCalendarProperty">
-        <xsd:sequence>
+        <xs:sequence>
             <xs:element name="end-date" type="iso:TS" minOccurs="0"/>
-        </xsd:sequence>
+        </xs:sequence>
     </xs:complexType>
 </xs:schema>
